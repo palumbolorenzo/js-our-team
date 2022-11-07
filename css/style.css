@@ -1,0 +1,19 @@
+header.container {
+    text-align: center;
+}
+
+div.container {
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+}
+
+.card-box {
+    gap: 3rem;
+    flex-wrap: wrap;
+}
+
+.card {
+    max-width: calc(1000px / 3);
+}
+
