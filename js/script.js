@@ -1,41 +1,49 @@
 const eleData = document.querySelector('.container');
 
+const employees = [
+    {
+        pic: `img/wayne-barnett-founder-ceo.jpg`,
+        name: 'Wayne Barnett',
+        profession: 'Founder & CEO'
+    },
 
+    {
+        pic: `img/angela-caroll-chief-editor.jpg`,
+        name: 'Angela Caroll',
+        profession: 'Chief Editor'
+    },
 
-const objEmployeeOne = {
-    pic: `<img src="img/angela-caroll-chief-editor.jpg">`,
-    name: 'Angela Caroll',
-    profession: 'Chief Editor'
-}
+    {
+        pic: `img/walter-gordon-office-manager.jpg`,
+        name: 'Walter Gordon',
+        profession: 'Office Manager',
+    },
 
-for (let key in objEmployeeOne) {
-    //console.log(`${key}: ${objEmployee[key]}`);
-    eleData.innerHTML += `<div class="img">${objEmployeeOne[key]}</div>`;
-    eleData.innerHTML += `<div class="h1">${objEmployeeOne[key]}</div>`;
-}
+    {
+        pic: `img/angela-lopez-social-media-manager.jpg`,
+        name: 'Angela Lopez',
+        profession: 'Social Media Manager',
+    },
 
+    {
+        pic: 'img/scott-estrada-developer.jpg',
+        name: 'Scott Estrada',
+        profession: 'Developer',
+    },
 
-const objEmployeeTwo = {
-    pic: `<img src="img/wayne-barnett-founder-ceo.jpg">`,
-    name: 'Wayne Barnett',
-    profession: 'Founder & CEO',
-}
-
-for (let key in objEmployeeTwo) {
-    //console.log(`${key}: ${objEmployee[key]}`);
-    eleData.innerHTML += `<div class="card">${objEmployeeTwo[key]}</div>`;
-}
-
-
-const objEmployeeThree = {
-    pic: `<img src="img/walter-gordon-office-manager.jpg">`,
-    name: 'Walter Gordon',
-    profession: 'Office Manager',
-}
-
-for (let key in objEmployeeThree) {
-    //console.log(`${key}: ${objEmployee[key]}`);
-    eleData.innerHTML += `<div class="card">${objEmployeeThree[key]}</div>`;
-}
-
-
+    {
+        pic: 'img/barbara-ramos-graphic-designer.jpg',
+        name: 'Barbara Ramos',
+        profession: 'Graphic Designer',
+    }
+]
+for (let i = 0; i < employees.length; i++) {
+    const employee = employees[i];
+    employee["name"]; // employee.name
+    eleData.innerHTML += 
+        `<div class="card">
+            <img class="pic" src="${employee.pic}">
+            <div class="h4">${employee.name}</div>
+            <div class="p">${employee.profession}</div>
+        </div>`;
+};
